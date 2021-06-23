@@ -38,6 +38,7 @@ iptables -A OUTPUT -p tcp -m tcp --dport 995 -m state --state NEW  -j ACCEPT
 ```
 ### Allow apple push - tls://gateway.sandbox.push.apple.com:2195
 > iptables -A OUTPUT -p tcp -m tcp --dport 2195 -m state --state NEW  -j ACCEPT
+> iptables -A OUTPUT -p tcp -m tcp --dport 2196 -m state --state NEW  -j ACCEPT
 
 ### Outbound DNS lookups
 > iptables -A OUTPUT -p udp -m udp --dport 53 -j ACCEPT
