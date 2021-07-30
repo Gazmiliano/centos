@@ -1,3 +1,19 @@
+### Disable firewalld
+```
+systemctl stop firewalld
+systemctl disable firewalld
+systemctl mask --now firewalld
+```
+
+### Install and Enable Iptables
+```
+yum install iptables-services
+systemctl start iptables
+systemctl start ip6tables
+systemctl enable iptables
+systemctl enable ip6tables
+```
+
 ### Accept any related or established connections
 ```
 iptables -I INPUT  1 -m state --state RELATED,ESTABLISHED -j ACCEPT
