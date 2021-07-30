@@ -14,6 +14,12 @@ systemctl enable iptables
 systemctl enable ip6tables
 ```
 
+### Check the current iptables rules
+```
+iptables -nvL
+ip6tables -nvL
+```
+
 ### Accept any related or established connections
 ```
 iptables -I INPUT  1 -m state --state RELATED,ESTABLISHED -j ACCEPT
