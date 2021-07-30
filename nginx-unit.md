@@ -20,10 +20,10 @@ enabled=1
 
 ### Configuration
 *Copy*
-> cp -p /usr/share/doc/unit-php-1.22.0/unit.example-php-config /etc/unit/test.config
+> cp -p /usr/share/doc/unit-php-1.22.0/unit.example-php-config /etc/unit/unit.conf
 
 *Add*
-> curl -X PUT -d @/etc/unit/test.config --unix-socket /var/run/control.unit.sock http://localhost/config/applications/test
+> curl -X PUT -d @/etc/unit/unit.conf --unix-socket /var/run/control.unit.sock http://localhost/config/applications/test
 
 *View*
 > curl --unix-socket /var/run/control.unit.sock http://localhost/
@@ -37,7 +37,7 @@ enabled=1
 ```    
 
 *Add*
-> curl -X PUT -d @/etc/unit/test.config --unix-socket /var/run/control.unit.sock http://localhost/config/applications/blogs
+> curl -X PUT -d @/etc/unit/unit.conf --unix-socket /var/run/control.unit.sock http://localhost/config/applications/blogs
 
 *Delete*
 > curl -X DELETE --unix-socket /var/run/control.unit.sock 'http://localhost/config/applications/blogs'
