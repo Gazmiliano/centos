@@ -23,10 +23,10 @@ enabled=1
 > cp -p /usr/share/doc/unit-php-1.22.0/unit.example-php-config /etc/unit/unit.conf
 
 *Add*
-> curl -X PUT -d @/etc/unit/unit.conf --unix-socket /var/run/control.unit.sock http://localhost/config/applications/test
+> curl -X PUT -d @/etc/unit/unit.conf --unix-socket /var/run/unit/control.sock http://localhost/config/applications/test
 
 *View*
-> curl --unix-socket /var/run/control.unit.sock http://localhost/
+> curl --unix-socket /var/run/unit/control.sock http://localhost/
 
 *Test configuration*
 ```
@@ -37,10 +37,10 @@ enabled=1
 ```    
 
 *Add*
-> curl -X PUT -d @/etc/unit/unit.conf --unix-socket /var/run/control.unit.sock http://localhost/config/applications/blogs
+> curl -X PUT -d @/etc/unit/unit.conf --unix-socket /var/run/unit/control.sock http://localhost/config/applications/blogs
 
 *Delete*
-> curl -X DELETE --unix-socket /var/run/control.unit.sock 'http://localhost/config/applications/blogs'
+> curl -X DELETE --unix-socket /var/run/unit/control.sock 'http://localhost/config/applications/blogs'
 
 ### Troubleshouting
 *broken pipe (increase timeout)*
