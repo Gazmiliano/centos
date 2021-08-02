@@ -1,0 +1,15 @@
+yum install phpmyadmin
+mkdir /usr/share/nginx/html/phpMyAdmin
+ln -s /usr/share/phpMyAdmin /usr/share/nginx/html/phpMyAdmin/
+
+cd /usr/share/nginx/html/phpMyAdmin/
+mv phpMyAdmin nothingtosee
+openssl passwd
+vi /etc/nginx/pma_pass
+demo:O5az.RSPzd.HE
+cp -p /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/phpMyAdmin.conf
+
+systemctl restart php-fpm
+systemctl restart nginx
+
+http://server_domain_or_IP/nothingtosee
