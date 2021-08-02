@@ -37,8 +37,10 @@ iptables -A INPUT -p icmp --icmp-type destination-unreachable -j ACCEPT
 iptables -A INPUT -p icmp --icmp-type time-exceeded -j ACCEPT
 ```
 ### Allow SSH
-> iptables -A INPUT -i eth0 -p tcp -m tcp --dport 1111 -m state --state NEW  -j ACCEPT
-> iptables -I INPUT -p tcp --dport 1111 -j ACCEPT
+```
+iptables -A INPUT -i eth0 -p tcp -m tcp --dport 1111 -m state --state NEW  -j ACCEPT
+iptables -I INPUT -p tcp --dport 1111 -j ACCEPT
+```
 
 ### Open ports
 ```
