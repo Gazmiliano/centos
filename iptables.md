@@ -98,3 +98,6 @@ iptables-save > /etc/sysconfig/iptables
 iptables-restore < /etc/sysconfig/iptables
 ```
 
+### Z
+iptables -nvL
+iptables -I INPUT -p tcp --dport 3899 -j ACCEPT
